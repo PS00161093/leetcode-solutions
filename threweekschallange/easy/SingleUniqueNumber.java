@@ -1,8 +1,13 @@
-class SingleUniqueNumber {
+package threweekschallange.easy;
 
-    /**
-     * SearchInsert - https://leetcode.com/problems/single-number/
-     */
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * challange.easy.SearchInsert - https://leetcode.com/problems/single-number/
+ */
+
+public class SingleUniqueNumber {
 
     public int singleUniqueNumber(int[] nums, int target) {
 

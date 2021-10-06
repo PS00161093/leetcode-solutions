@@ -1,7 +1,9 @@
-class SearchInsert {
+package twoweekschallange.easy;
+
+public class SearchInsert {
 
     /**
-     * SearchInsert - https://leetcode.com/problems/search-insert-position/
+     * challange.easy.SearchInsert - https://leetcode.com/problems/search-insert-position/
      */
 
     public int searchInsert(int[] nums, int target) {

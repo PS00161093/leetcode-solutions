@@ -1,7 +1,9 @@
-class FirstBadVersion {
+package twoweekschallange.easy;
+
+public class FirstBadVersion {
 
     /**
-     * FirstBadVersion - https://leetcode.com/problems/first-bad-version/
+     * challange.easy.FirstBadVersion - https://leetcode.com/problems/first-bad-version/
      */
 
     public int firstBadVersion(int n) {

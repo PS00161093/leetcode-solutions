@@ -1,4 +1,6 @@
-class BinarySearch {
+package twoweekschallange.easy;
+
+public class BinarySearch {
 
     /**
      * Binary search - https://leetcode.com/problems/binary-search/
