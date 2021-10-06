@@ -1,4 +1,4 @@
-package threweekschallange.easy;
+package threeweekschallange.easy;
 
 import java.util.HashMap;
 import java.util.Map;
