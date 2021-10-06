@@ -8,6 +8,11 @@ import java.util.Map;
  */
 public class MajorityElement {
 
+    @Override
+    public String toString() {
+        return "MajorityElement{}";
+    }
+
     public int majorityElement(int[] nums) {
 
         int majority = nums.length / 2;
@@ -19,6 +24,7 @@ public class MajorityElement {
         for (Map.Entry<Integer, Integer> e : map.entrySet()) {
             if (e.getValue() > majority) return e.getKey();
         }
+
 
         return 0;
     }
