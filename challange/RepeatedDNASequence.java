@@ -20,7 +20,6 @@ public class RepeatedDNASequence {
                 repeated.add(str);
             }
         }
-        
         return new ArrayList(repeated);
     }
 }
