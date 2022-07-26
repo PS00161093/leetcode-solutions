@@ -25,7 +25,6 @@ public class MajorityElement {
             if (e.getValue() > majority) return e.getKey();
         }
 
-
         return 0;
     }
 }
