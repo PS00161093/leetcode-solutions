@@ -6,8 +6,6 @@ on:
 jobs:
   changelog:
     runs-on: ubuntu-20.04
-    container:
-      options: --user root
     steps:
       - uses: actions/checkout@v2
         with: 
