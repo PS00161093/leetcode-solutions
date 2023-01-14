@@ -16,6 +16,7 @@ public class MaxFrequencySubstring {
         System.out.println(maxFreq(str, maxLetters, minSize, maxSize));
     }
 
+    // 39/40 test cases passed. Got timeLimitExceeded for the last one.
     public static int maxFreq(String s, int maxLetters, int minSize, int maxSize) {
         Set<String> constrainedSubStrings = new HashSet<>();
         getSubStringsWithinLimits(s, minSize, constrainedSubStrings, maxLetters);
@@ -55,6 +56,28 @@ public class MaxFrequencySubstring {
 
         return count;
     }
+    
+    //All test cases passed
+    public static int maxFreq(String s, int maxLetters, int minSize, int maxSize) {
+        if (s == null || s.length() == 0 || maxLetters == 0) return 0;
+        
+        HashMap<String, Integer> map = new HashMap<>();
+        int max = 0;
+        for (int i = 0; i < s.length() - minSize + 1; i++) {
+            String subString = s.substring(i, i + minSize);
+            if (isValid(subString, maxLetters)) {
+                map.put(subString, map.getOrDefault(subString, 0) + 1);
+                max = Math.max(max, map.get(subString));
+            }
+        }
+        
+        return max;
+    }
 
+    static boolean isValid(String subString, int maxLetters) {
+        HashSet<Character> hs = new HashSet<>();
+        for (char c : subString.toCharArray()) hs.add(c);
+        return hs.size() <= maxLetters;
+    }
 
 }
