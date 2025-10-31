@@ -1,6 +1,30 @@
 // https://leetcode.com/problems/count-vowel-substrings-of-a-string/
 
 class Solution {
+
+    public int countVowelSubstrings(String word) {
+        int ans = 0;
+        Set<Character> set = Set.of('a', 'e', 'i', 'o', 'u');
+        int len = word.length();
+        for(int i = 0; i < len; i++) {
+            Set<Character> seen = new HashSet<>();
+            for(int j = i; j < len; j++) {
+                char c = word.charAt(j);
+                if(!set.contains(c)) {
+                    break;
+                }
+
+                seen.add(c);
+
+                if(seen.size() == 5) {
+                    ans++;
+                }
+            }
+        }
+        return ans;
+    }
+
+    
     public int countVowelSubstrings(String word) {
         return atMost(word, 5) - atMost(word, 4);
     }
